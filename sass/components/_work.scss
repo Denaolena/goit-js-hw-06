@@ -1,0 +1,52 @@
+.work {
+  display: none;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+
+  &__list {
+    display: inline-flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &::before {
+      display: inline-block;
+      bottom: 0;
+      right: 0;
+      content: '';
+      position: absolute;
+      width: 370px;
+      height: 70px;
+      background-color: rgba(47, 48, 58, 0.8);
+    }
+  }
+  &__text {
+    display: inline-block;
+    margin: 27px auto;
+    position: absolute;
+    bottom: 0;
+    right: 30%;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #ffffff;
+  }
+}

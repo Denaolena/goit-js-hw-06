@@ -1,0 +1,29 @@
+//Base
+@import './utils/variables';
+@import './utils/placeholder';
+@import './base/normalize';
+@import './base/common';
+//Header
+@import './components/header/page-header';
+@import './components/header/logo';
+@import './components/header/site-nav';
+@import './components/header/header-contacts';
+// HERO
+@import './components/hero/hero';
+@import './components/hero/modal';
+@import './components/hero/form-modal';
+// Feature
+@import './components/section-feature';
+// Work
+@import './components/work';
+// Team
+@import './components/team';
+// Clients
+@import './components/clients';
+// Footer
+@import './components/footer/footer';
+@import './components/footer/footer-icon';
+@import './components/footer/form-footer';
+// Portfolio
+@import './components/portfolio/portfolio-buttons';
+@import './components/portfolio/portfolio-cards';
