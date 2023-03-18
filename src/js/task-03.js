@@ -13,3 +13,17 @@ const images = [
   },
 ];
 const galleryEl = document.querySelector('.gallery');
+
+galleryEl.style.listStyle = 'none';
+galleryEl.style.display = 'flex';
+galleryEl.style.flexDirection = 'column';
+// galleryEl.style.justifyContent = 'center';
+galleryEl.style.alignItems = 'center';
+// galleryEl.style.width = '360px';
+// console.log(galleryEl);
+
+const imageEl = images.map(
+  image => `<li><img src= ${image.url} width = 360px alt = ${image.alt}></img></li>`
+);
+
+galleryEl.insertAdjacentHTML('beforeend', imageEl);
