@@ -4,18 +4,21 @@ form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
   event.preventDefault();
 
-  const formElements = event.currentTarget.elements;
-  //   console.dir(formElements);
+  // const formElements = event.currentTarget.elements;
+  // const email = formElements.email.value;
+  // const password = formElements.password.value;
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
 
-  const email = formElements.email.value;
-  const password = formElements.password.value;
-  if (email === '' || password === '') {
-    alert('Все поля должны быть заполнены.');
+  if (email.value === '' || password.value === '') {
+    return alert('Все поля должны быть заполнены.');
   }
   const formData = {
-    email,
-    password,
+    email: email.value,
+    password: password.value,
   };
-  form.reset();
   console.log(formData);
+  // form.reset();
+  event.currentTarget.reset();
 }
